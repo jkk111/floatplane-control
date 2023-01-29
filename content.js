@@ -1,7 +1,7 @@
 const pathRegex = /\/post\/([a-zA-Z0-9]+)/
 
 const hookVideo = async (fragment, timestamp, video) => {
-  video.addEventListener('timeupdate', async e => {
+  video.addEventListener('timeupdate', async () => {
     await chrome.storage.local.set({ [`fp:${fragment}`]: video.currentTime })
   })
   video.currentTime = timestamp

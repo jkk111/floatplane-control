@@ -2,8 +2,11 @@
   "manifest_version": 3,
   "name": "Floatplane Control",
   "description": "Floatplane auto-play and timestamp memory",
-  "version": "1.0",
+  "version": "0.0.2",
   "permissions": ["storage"],
+  "icons": {
+    "128": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://www.floatplane.com/post/*"],

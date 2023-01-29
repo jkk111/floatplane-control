@@ -8,6 +8,9 @@ const hookVideo = async (fragment, timestamp, video) => {
   video.addEventListener('timeupdate', async () => {
     await chrome.storage.local.set({ [`fp:${fragment}`]: video.currentTime })
   })
+  video.addEventListener('ended', async () => {
+    await chrome.storage.local.set({ [`fp:${fragment}`]: 0 })
+  })
   video.currentTime = timestamp
   try {
     await video.play()

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Floatplane Control",
+  "description": "Floatplane auto-play and timestamp memory",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.floatplane.com/post/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

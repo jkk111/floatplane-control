@@ -42,7 +42,7 @@ const seek = async (hours, minutes, seconds) => {
 
 const onload = async () => {
   const [_, fragment] = pathRegex.exec(window.location.pathname)
-  const timestamp = (await chrome.storage.local.get([`fp:${fragment}`]))[
+  let timestamp = (await chrome.storage.local.get([`fp:${fragment}`]))[
     `fp:${fragment}`
   ]
 
